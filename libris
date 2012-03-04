@@ -29,7 +29,8 @@ while [ $# -ge 0 ]; do
 		-o)
 			format=oxford; shift;;
 		-i)
-			isbn="$2"; shift; shift;;
+			isbn=$( echo "$2" | sed "s/-//" )
+			shift; shift;;
 		--)
 			shift; break;;
 	esac
