@@ -29,7 +29,7 @@ while [ $# -ge 0 ]; do
 		-o)
 			format=oxford; shift;;
 		-i)
-			isbn=$( echo "$2" | sed "s/-//" )
+			isbn=$( echo "$2" | sed "s/-//g" )
 			shift; shift;;
 		--)
 			shift; break;;
@@ -37,7 +37,7 @@ while [ $# -ge 0 ]; do
 done
 
 if [ "${isbn}" = "" -a "${1}" != "" ]; then
-	isbn="$1"
+	isbn=$( echo "$1" | sed "s/-//g" )
 elif [ "${isbn}" = "" ]; then
 	usage
 	exit 2

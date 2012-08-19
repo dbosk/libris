@@ -1,8 +1,11 @@
-INSTALLDIR?=${HOME}/bin
-FILES?=		libris
+# $Id$
 
-.PHONY: install
+PACKAGE=		libris
+FILES?=			libris
+PACKAGE_FILES=	${FILES}
+INSTALLDIR?=	${HOME}/bin
+PUB_FILES=		${FILES}
+CATEGORY=		shell
 
-install: ${FILES}
-	mkdir -p ${INSTALLDIR}
-	cp -R ${FILES} ${INSTALLDIR}
+include miun.package.mk
+include miun.pub.mk
