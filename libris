@@ -5,7 +5,7 @@
 # Available under the MIT license.
 #
 # This script fetches a reference for a supplied ISBN from the Libris
-# database at Kungliga Biblioteket.  The reference can be specified to
+# database at the Royal Library of Sweden.  The reference can be specified to
 # be in e.g. BibTeX-format.
 
 format=bibtex
