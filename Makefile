@@ -1,12 +1,8 @@
-# $Id$
+PKG_NAME-main=			libris
+PKG_FILES-main=			libris
+PKG_TARBALL_FILES-main=	${PKG_FILES-main} Makefile
+PREFIX?=				/usr/local
+PKG_DIR-main=			/bin
 
-PACKAGE=		libris
-FILES?=			libris
-PACKAGE_FILES=	${FILES} Makefile
-PREFIX?=		${HOME}
-INSTALLDIR?=	/bin
-PUB_FILES=		${FILES} ${PACKAGE}.tar.gz
-CATEGORY=		shell
-
-include miun.package.mk
-include miun.pub.mk
+INCLUDE_MAKEFILES=makefiles
+include ${INCLUDE_MAKEFILES}/package.mk
